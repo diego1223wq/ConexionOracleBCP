@@ -7,10 +7,9 @@ import java.sql.SQLException;
 public class ConexionOracle {
 
     public static void main(String[] args) {
-        String url = "jdbc:oracle:thin:@localhost:1521:xe"; // cambia ORCL si tu SID es distinto
-        String usuario = "SYSTEM"; // <-- reemplaza con tu usuario Oracle
-        String contraseña = "SYSTEM"; // <-- reemplaza con tu contraseña
-
+        String url = "jdbc:oracle:thin:@localhost:1521:xe"; 
+        String usuario = "SYSTEM"; // 
+        String contraseña = "SYSTEM"; //
         try {
             Connection conexion = DriverManager.getConnection(url, usuario, contraseña);
             System.out.println("✅ Conexión exitosa a Oracle 19c!");
