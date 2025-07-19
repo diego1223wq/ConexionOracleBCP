@@ -32,7 +32,7 @@ public class VentanaPrincipal extends JFrame {
     String url = "jdbc:oracle:thin:@localhost:1521:xe"; 
     String usuario = "SYSTEM";
     String clave = "SYSTEM";
-
+       
     try (Connection con = DriverManager.getConnection(url, usuario, clave);
          Statement stmt = con.createStatement();
          ResultSet rs = stmt.executeQuery("SELECT CODIGO, NOMBRE, APELLIDO, TIPO_DOCUMENTO, DOCUMENTO FROM CLIENTE_WEB")) {
@@ -51,7 +51,7 @@ public class VentanaPrincipal extends JFrame {
         JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
     }
 }
-
+  
 
     public static void main(String[] args) {
     SwingUtilities.invokeLater(() -> {
